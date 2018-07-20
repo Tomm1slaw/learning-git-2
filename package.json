@@ -28,10 +28,10 @@
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange scss/*.scss -- npm-run-all sassprefixer",
-    "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
-    "sassprefixer:autoprefixer": "autoprefixer-cli css/style.css",
-    "watch:browser-sync": "browser-sync start --server --files '*.html' 'css/*.css'"
+    "watch:sassprefixer": "onchange scss/*.scss -- npm-run-all watch:*",
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch:autoprefixer": "autoprefixer-cli css/style.css",
+    "watch:browsersync": "browser-sync start --server --files '*.html' 'css/*.css'"
   },
   "keywords": [],
   "author": "",
